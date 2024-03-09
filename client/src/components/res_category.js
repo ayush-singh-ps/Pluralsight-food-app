@@ -10,7 +10,7 @@ const Category=(props)=>{
     
     const showindex=props.showindex;
     const setit=props.seit;
-console.log(props)
+
     // const[showitem,setshow]=useState(false);
     const toggle=()=>{
         setit();
@@ -19,7 +19,6 @@ console.log(props)
     const itemlist=useItem(menuid,props.data.id)
 // if(itemlist.length==0)return <Shimmer/>
     
-    console.log(itemlist)
     return(
         
         <div className="w-6/12 m-auto my-4 bg-gray-50 shadow-lg p-4 ">

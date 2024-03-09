@@ -8,14 +8,19 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Menu from "./components/menucard";
 import Login from "./components/login";
+import store from "./store/store";
+import { Provider } from "react-redux";
+import Cart from "./components/cart";
 const App=()=>{
     console.log('started')
     return(
-    <div className="app-container">
-    <Header/>
-    <Outlet/>
-    {/* // <Footer/> */}
-    </div>
+    <Provider store={store}>
+        <div className="app-container">
+            <Header/>
+            <Outlet/>
+            {/* // <Footer/> */}
+        </div>
+    </Provider>
     );
 
 }
@@ -45,6 +50,10 @@ const route=createBrowserRouter([
                 path:"/menu/:menuid",
                 element:<Menu/>
 
+            },
+            {
+                path:"/cart",
+                element:<Cart/>
             }
         ]
     }

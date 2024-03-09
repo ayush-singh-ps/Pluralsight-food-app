@@ -8,7 +8,7 @@ useEffect(()=>{
     const fetchdata= async()=>{
         const dataFetch = await fetch('http://localhost:8080/api/show/' +menuid )
         const json = await dataFetch.json();
-        console.log(json);
+        
 
         // console.log(json.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card);
         setmenu(json);

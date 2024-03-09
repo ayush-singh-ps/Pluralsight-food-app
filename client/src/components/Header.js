@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import useShowStatus from "../utils/useShowStatus";
 import { useContext } from "react";
 import usercontext from "./usercontext";
+import { useSelector } from "react-redux";
 
 
 const Header=()=>{
     const status=useShowStatus();
     const username=useContext(usercontext);
-    console.log(username);
+   
+    const cart=useSelector((store)=>store.cartSlice.items);
     return (
         <div className="flex justify-between bg-pink-100 shadow-lg">
         <img className="w-36" src={LOGO_URL} alt="img not available"/>
@@ -19,6 +21,7 @@ const Header=()=>{
              <li className="px-4 "><Link to="/">Home</Link></li>
             <li className="px-4"><Link to="/about">About Us</Link></li>
             <li className="px-4"><Link to="/contact">Contact Us</Link></li>
+            <li className="px-4"><Link to="/cart">Cart - ({cart.length} item)</Link></li>
             <li className="px-4 font-semibold">User:[{username.username}]</li>
             
         </ul>
