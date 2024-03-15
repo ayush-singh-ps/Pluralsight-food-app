@@ -1,0 +1,242 @@
+[
+    {
+        "id": 216,
+        "name": "Andhra Gunpowder",
+        "cuisine": "Andhra,Biryani,South Indian",
+        "ratings": "4.5",
+        "costoftwo": "350.00",
+        "delievery_time": {
+            "minutes": 19
+        },
+        "image_cdn": "byilgyrcfz690ryoasww",
+        "ispromoted": false
+    },
+    {
+        "id": 217,
+        "name": "Nandhana Palace",
+        "cuisine": "Biryani,Andhra,South Indian,North Indian",
+        "ratings": "4.2",
+        "costoftwo": "500.00",
+        "delievery_time": {
+            "minutes": 19
+        },
+        "image_cdn": "195876a3181ef63f76e45e3a7b49b585",
+        "ispromoted": false
+    },
+    {
+        "id": 218,
+        "name": "KFC",
+        "cuisine": "Burgers,Biryani,American,Snacks,Fast Food",
+        "ratings": "4.2",
+        "costoftwo": "400.00",
+        "delievery_time": {
+            "minutes": 19
+        },
+        "image_cdn": "f01666ac73626461d7455d9c24005cd4",
+        "ispromoted": false
+    },
+    {
+        "id": 219,
+        "name": "Leons - Burgers & Wings (Leon Grill)",
+        "cuisine": "American,Snacks,Turkish,Portuguese,Continental",
+        "ratings": "4.4",
+        "costoftwo": "300.00",
+        "delievery_time": {
+            "minutes": 21
+        },
+        "image_cdn": "b2edbc28b7b8219d6e0a9c049ce06658",
+        "ispromoted": false
+    },
+    {
+        "id": 220,
+        "name": "Ambur Star Briyani Since 1890",
+        "cuisine": "Biryani,Chettinad,Andhra,Beverages,Seafood",
+        "ratings": "4.4",
+        "costoftwo": "500.00",
+        "delievery_time": {
+            "minutes": 28
+        },
+        "image_cdn": "yktanq9i7yfjrixaghuj",
+        "ispromoted": false
+    },
+    {
+        "id": 221,
+        "name": "McDonalds",
+        "cuisine": "Burgers,Beverages,Cafe,Desserts",
+        "ratings": "4.5",
+        "costoftwo": "400.00",
+        "delievery_time": {
+            "minutes": 20
+        },
+        "image_cdn": "f62564e14944753903849c4ef673af4d",
+        "ispromoted": false
+    },
+    {
+        "id": 222,
+        "name": "Burger King",
+        "cuisine": "Burgers,American",
+        "ratings": "4.3",
+        "costoftwo": "350.00",
+        "delievery_time": {
+            "minutes": 22
+        },
+        "image_cdn": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+        "ispromoted": false
+    },
+    {
+        "id": 223,
+        "name": "Dominos Pizza",
+        "cuisine": "Pizzas,Italian,Pastas,Desserts",
+        "ratings": "4.4",
+        "costoftwo": "400.00",
+        "delievery_time": {
+            "minutes": 25
+        },
+        "image_cdn": "vw6n5betlssnqelt7rmu",
+        "ispromoted": false
+    },
+    {
+        "id": 225,
+        "name": "Candices Gourmet Sandwiches & Wraps",
+        "cuisine": "Continental,American,Salads,Desserts,Beverages,Healthy Food",
+        "ratings": "4.5",
+        "costoftwo": "600.00",
+        "delievery_time": {
+            "minutes": 22
+        },
+        "image_cdn": "d1331113564b015c9d55c48ff48a2553",
+        "ispromoted": false
+    },
+    {
+        "id": 226,
+        "name": "Chinita Real Mexican Food",
+        "cuisine": "Mexican,Salads,Desserts,Beverages",
+        "ratings": "4.5",
+        "costoftwo": "750.00",
+        "delievery_time": {
+            "minutes": 22
+        },
+        "image_cdn": "29fc772cc06b07a4b018e4971d96c9a3",
+        "ispromoted": false
+    },
+    {
+        "id": 227,
+        "name": "Hotel Empire",
+        "cuisine": "North Indian,Kebabs,Biryani",
+        "ratings": "4.3",
+        "costoftwo": "450.00",
+        "delievery_time": {
+            "minutes": 25
+        },
+        "image_cdn": "un4omn7rcunkmlw6vikr",
+        "ispromoted": false
+    },
+    {
+        "id": 230,
+        "name": "Lo! - Low Carb and Keto Foods",
+        "cuisine": "Healthy Food,Keto,Continental",
+        "ratings": "4.4",
+        "costoftwo": "150.00",
+        "delievery_time": {
+            "minutes": 27
+        },
+        "image_cdn": "o8t0w5gdlujpigauaflw",
+        "ispromoted": false
+    },
+    {
+        "id": 232,
+        "name": "A2B - Adyar Ananda Bhavan",
+        "cuisine": "South Indian,North Indian,Sweets,Chinese",
+        "ratings": "4.3",
+        "costoftwo": "300.00",
+        "delievery_time": {
+            "minutes": 23
+        },
+        "image_cdn": "gxydb9wvkadarapno4hk",
+        "ispromoted": false
+    },
+    {
+        "id": 233,
+        "name": "EatFit",
+        "cuisine": "Chinese,Healthy Food,Tandoor,Pizzas,Thalis,Biryani",
+        "ratings": "4.5",
+        "costoftwo": "270.00",
+        "delievery_time": {
+            "minutes": 19
+        },
+        "image_cdn": "a564ace38895abd960157ac2a76aaf2a",
+        "ispromoted": false
+    },
+    {
+        "id": 215,
+        "name": "Pizza Hut",
+        "cuisine": "Pizzas",
+        "ratings": "4.1",
+        "costoftwo": "350.00",
+        "delievery_time": {
+            "minutes": 23
+        },
+        "image_cdn": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+        "ispromoted": true
+    },
+    {
+        "id": 224,
+        "name": "Dindigul Thalappakatti",
+        "cuisine": "Biryani,Barbecue,South Indian,Chinese,North Indian",
+        "ratings": "4.2",
+        "costoftwo": "650.00",
+        "delievery_time": {
+            "minutes": 31
+        },
+        "image_cdn": "exhzkyd9pjoqlobruy4v",
+        "ispromoted": true
+    },
+    {
+        "id": 228,
+        "name": "Sharief Bhai",
+        "cuisine": "Biryani,Kebabs,Mughlai,Arabian,South Indian,Rolls & Wraps,Street Food,Fast Food,Desserts,Beverages",
+        "ratings": "4.3",
+        "costoftwo": "400.00",
+        "delievery_time": {
+            "minutes": 27
+        },
+        "image_cdn": "9ca4ac15ca5cdee1e71efe15909d465f",
+        "ispromoted": true
+    },
+    {
+        "id": 231,
+        "name": "The Bowl Company",
+        "cuisine": "Mediterranean,Mexican,Mughlai,Oriental,Pastas,Punjabi,Rajasthani,Snacks",
+        "ratings": "4.5",
+        "costoftwo": "300.00",
+        "delievery_time": {
+            "minutes": 27
+        },
+        "image_cdn": "bb6049fae59b8a2413a9177eb0338b49",
+        "ispromoted": true
+    },
+    {
+        "id": 234,
+        "name": "Chaayos Chai+Snacks=Relax",
+        "cuisine": "Bakery,Beverages,Chaat,Desserts,Home Food,Italian,Maharashtrian,Snacks,Street Food,Sweets",
+        "ratings": "4.5",
+        "costoftwo": "250.00",
+        "delievery_time": {
+            "minutes": 18
+        },
+        "image_cdn": "cace805a6ba74137571d0f7ac92302b1",
+        "ispromoted": true
+    },
+    {
+        "id": 229,
+        "name": "California Burrito",
+        "cuisine": "North Indian,Biryani,Kebabs,Mediterranean,Mughlai",
+        "ratings": "4.4",
+        "costoftwo": "650.00",
+        "delievery_time": {
+            "minutes": 31
+        },
+        "image_cdn": "b15a2367ff3d6f0bf92d1def3c1e5c59",
+        "ispromoted": false
+    }
+]

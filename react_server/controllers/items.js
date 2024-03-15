@@ -5,10 +5,11 @@ const showItem=async (req,res,next)=>{
    try {
    const qry=await knex.raw(`select * from res_cat_items where res_id=${resid} and res_cat_id=${catid};`)
 
-  res.send(qry.rows)
+  if(((qry.rows).length)>0)res.status(200).send(qry.rows)
+  else throw error;
 
    } catch (error) {
-    console.log(error.message)
+    res.status(500).send(error)
    }
 
     next();

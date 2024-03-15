@@ -13,21 +13,26 @@ const Body=()=>{
     let [filterList,setfilter]=useState([]);
     
     
+    
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // const df = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-                // const js = await df.json();
                
-                const dataFetch = await fetch("http://localhost:8080/api/");
+                const token = localStorage.getItem('token');
+                const dataFetch = await fetch("http://localhost:8080/api/", {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`, 
+                    },
+                  });
                 const json = await dataFetch.json();
-                
+             
                 setlist(json);
                 setfilter(json);
                 
-                // console.log(filterList[0]);
-                
-                // Now you can use jsonData
+               
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -41,20 +46,21 @@ const Body=()=>{
 
     
         
-    // * optional chaining 
+
     
     const status=useShowStatus();
     const Procard=Promotedcard(Card);
     if(status===false)return <p>oops! something went wrong</p>
     
     return listofrest.length===0? <Shimmer /> :(
-        <div className="body-container">
-            <div className="flex btn-container m-4 p-4 ">
+       
+        <div className="body-container bg-custom-purple">
+            <div className="flex btn-container m-4 mt-0 p-4 ">
             
                 
                 <div className="search">
-                    <input type="text" className="border border-solid border-black" value={userinput} onChange={(e)=>setinput(e.target.value)}/>
-                    <button className="px-4 bg-green-100 m-4 rounded-lg" onClick={()=>{
+                    <input name='input' type="text" className="border border-solid bg-custom-color p-1 text-cutom-white border-cutom-button rounded-md font-extralight" placeholder=" 🔎  Search" value={userinput} onChange={(e)=>setinput(e.target.value)}/>
+                    <button className="px-4 py-0.5 bg-cutom-button text-cutom-white m-4 rounded-lg" onClick={()=>{
                         console.log(userinput);
                         listofrest=listofrest.filter((data)=>data.name.toLowerCase().includes(userinput.toLowerCase()));
                         console.log(listofrest);
@@ -65,11 +71,11 @@ const Body=()=>{
                 </div>
                 
                 <div>
-                    <button className="px-4  bg-green-100 m-4 rounded-lg" onClick={()=>{
+                    <button className="px-4 bg-cutom-button py-0.5 text-white m-4 rounded-lg" onClick={()=>{
                         listofrest=listofrest.filter((obj)=>obj.ratings > 4.2);
                         setfilter(listofrest);
                     }
-                    }>Filter List</button>
+                    }>Filter top Restaurant</button>
                 </div>
             </div>
             <div className="flex flex-wrap">
@@ -82,6 +88,7 @@ const Body=()=>{
                     (<Card  resdata={data}/>)} </Link>)}
             </div>
         </div>
+        
     );
 }
 export default Body;

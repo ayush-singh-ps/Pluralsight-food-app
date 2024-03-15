@@ -4,10 +4,13 @@ const {  passwordValidate }=require('../validators/authvalidate')
 const { validatepass }=require('../validators/loginvalidator')
 
 
+
 const route=Router();
 
 route.get('/get-users',getUsers)
-route.post('/register',passwordValidate,register)
+route.post('/register',validatepass,register)
 route.post('/login',login)
+
+
 module.exports=route;
 

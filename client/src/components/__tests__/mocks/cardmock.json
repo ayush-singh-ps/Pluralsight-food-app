@@ -1,0 +1,12 @@
+{
+    "id": 216,
+    "name": "Andhra Gunpowder",
+    "cuisine": "Andhra,Biryani,South Indian",
+    "ratings": "4.5",
+    "costoftwo": "350.00",
+    "delievery_time": {
+        "minutes": 19
+    },
+    "image_cdn": "byilgyrcfz690ryoasww",
+    "ispromoted": false
+}

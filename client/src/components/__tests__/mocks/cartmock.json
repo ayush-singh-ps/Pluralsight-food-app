@@ -1,0 +1,22 @@
+[
+    {
+        "id": 46,
+        "res_cat_id": 8,
+        "res_id": 216,
+        "image_cdn": "3552f46d42b1f00e1972b719bfeba648",
+        "is_recommended": false,
+        "name": "Andhra Veg Meals For 1",
+        "price": "289.00",
+        "description": "Serves 1 | Steamed Rice, Pappu, Veggie Sambar, Tomato Pepper Rasam, Gutti Vankaya (Brinjal Curry), Crispy Aloo Vepudu, Fresh Curd, Kandi Podi (gunpowder), Ghee, Papad, Fresh Chutney, Deep-fried sun-dried chilli, and Sweet.\n\n\"Allergens : Dairy\nNutritional information : Kcal(g):1400, Protein(g): 37, Carbohydrate(g): 199, Fat (g):51\""
+    },
+    {
+        "id": 47,
+        "res_cat_id": 8,
+        "res_id": 216,
+        "image_cdn": "09dde73cd0bc184307be9f619e93d869",
+        "is_recommended": false,
+        "name": "Andhra Veg Meals For 2",
+        "price": "559.00",
+        "description": "Serves 2 | Steamed Rice, Pappu, Veggie Sambar, Tomato Pepper Rasam, Gutti Vankaya (Brinjal Curry), Crispy Aloo Vepudu, Fresh Curd, Kandi Podi (gunpowder), Ghee, Papad, Fresh Chutney, Deep-fried sun-dried chilli, and Sweet.\n\n\"Allergens : Dairy\nNutritional information : Kcal(g):3594, Protein(g): 119, Carbohydrate(g): 442, Fat (g):150\""
+    }
+]

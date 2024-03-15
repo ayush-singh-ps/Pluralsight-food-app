@@ -1,7 +1,7 @@
-import { createContext } from "react";
+// import { createContext } from "react";
 
-const usercontext=createContext({
-    username:"Ayush-ps"
-})
+// const usercontext=createContext({
+//     username:"Ayush-ps"
+// })
 
-export default usercontext;
+// export default usercontext;

@@ -12,15 +12,12 @@ const Menu=()=>{
     if (menulist.length===0) return <Shimmer/>
    
 
-    // const { itemCards, carousel } = 'itemCards' in menulist ? menulist : { carousel: menulist.carousel };
-
-    // console.log(itemCards[1].card.info.name);
-    // const {title}=card.card;
-    // console.log(title)
+   
     
     return(
         <div>
-       {menulist.map((items,index)=>
+       {
+       (menulist.length===0)?<Shimmer/>:menulist.map((items,index)=>
             <Category 
             key={items.id}
             data={items} 
@@ -29,14 +26,7 @@ const Menu=()=>{
             
             />)
             }
-        {/* <ul>
-            {itemCards?
-        itemCards.map((item)=><li key={item.card.info.id}>{item.card.info.name}@{item.card.info.defaultPrice? item.card.info.defaultPrice/100:item.card.info.price/100}</li>)
-        :
-        carousel.map((item)=><li key={item.dish.info.id}>{item.dish.info.name}@{item.dish.info.defaultPrice? item.dish.info.defaultPrice/100:item.dish.info.price/100}</li>)
-            }
-
-        </ul> */}
+   
         </div>
     )
 

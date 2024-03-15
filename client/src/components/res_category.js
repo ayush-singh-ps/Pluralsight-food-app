@@ -21,10 +21,11 @@ const Category=(props)=>{
     
     return(
         
-        <div className="w-6/12 m-auto my-4 bg-gray-50 shadow-lg p-4 ">
+        <div className="w-6/12 m-auto my-4 bg-custom-color text-cutom-white shadow-lg p-4 ">
            
             <div className="flex justify-between font-bold cursor-pointer" onClick={toggle} >
             <span>{props.data.cat_name} </span>
+            <span>↓</span>
            
       
             
@@ -35,7 +36,7 @@ const Category=(props)=>{
             <div>
                 <Item key={props.data.id} data={itemlist}/>
             </div>}
-            {/* {data.username} */}
+          
             
 
         </div>

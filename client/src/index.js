@@ -11,11 +11,12 @@ import Login from "./components/login";
 import store from "./store/store";
 import { Provider } from "react-redux";
 import Cart from "./components/cart";
+import Signup from "./components/signup";
 const App=()=>{
     console.log('started')
     return(
     <Provider store={store}>
-        <div className="app-container">
+        <div className="app-container bg-custom-purple fixed top-0 left-0 bottom-0 right-0 overflow-auto">
             <Header/>
             <Outlet/>
             {/* // <Footer/> */}
@@ -31,11 +32,15 @@ const route=createBrowserRouter([
         element:<Login/>
     },
     {
+        path:'/signup',
+        element:<Signup/>
+    },
+    {
         path:'/',
         element:<App/>,
         children:[
             {
-                path:"/",
+                path:"/body",
                 element:<Body/>
             },
             {

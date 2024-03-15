@@ -6,6 +6,7 @@ const knexConfig={
       user: 'postgres',
       password: '1234',
       database: 'myproj_db',
+      
     }
 }
 

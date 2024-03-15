@@ -3,18 +3,18 @@ const {knex}=require('../config/connect')
 const showCat=async (req,res,next)=>{
     const { id } = req.params;
    try {
-   const qry=await knex.raw(`SELECT *
-   FROM res_category 
-   WHERE id IN (SELECT cat_id FROM res_cat_rel WHERE res_id = ${id})`)
+      const qry=await knex.raw(`SELECT *
+      FROM res_category 
+      WHERE id IN (SELECT cat_id FROM res_cat_rel WHERE res_id = ${id})`)
 
-  res.send(qry.rows)
+    if((qry.rows).length>0)res.status(200).send(qry.rows)
+    else throw error;
 
    } catch (error) {
-    console.log(error.message)
+    res.status(500).send(error)
    }
-
-    next();
-
+   
+    
 }
 
 module.exports={showCat}
