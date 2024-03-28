@@ -18,7 +18,7 @@ const Card=(props)=>{
       
     return (
         
-        <div data-testid='cards' className="m-4 p-4 w-[250px] card-container rounded-lg border border-custom-h bg-custom-color border-cutom-white text-cutom-white shadow-lg hover:bg-custom-h overflow-hidden flex-wrap h-[380px]" >
+        <div data-testid='cards' className="m-4 p-4 w-[250px] card-container rounded-lg border border-custom-h bg-custom-color text-cutom-white shadow-lg hover:bg-custom-h overflow-hidden flex-wrap h-[380px]" >
             <img className="card-logo rounded-lg w-[200px] h-[150px]" src={ CARD_LOGO + image_cdn  } alt="img not available"/>
             <h3 className="w-[200px] truncate font-bold py-4 text-lg"><u>{name}</u></h3>
            

@@ -60,7 +60,7 @@ test("checking filter button functionality",async()=>{
     </BrowserRouter>)
     })
 
-    const filbtn=screen.getByText('Filter List')
+    const filbtn=screen.getByText('Filter top Restaurant')
 
     fireEvent.click(filbtn)
 

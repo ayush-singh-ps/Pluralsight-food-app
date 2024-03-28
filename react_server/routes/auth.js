@@ -8,8 +8,8 @@ const { validatepass }=require('../validators/loginvalidator')
 const route=Router();
 
 route.get('/get-users',getUsers)
-route.post('/register',validatepass,register)
-route.post('/login',login)
+route.post('/register',validatepass,passwordValidate,register)
+route.post('/login',validatepass,passwordValidate,login)
 
 
 module.exports=route;

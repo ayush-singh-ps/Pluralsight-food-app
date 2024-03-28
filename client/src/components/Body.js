@@ -1,23 +1,23 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import Card,{Promotedcard} from "./Card";
 import {  useEffect} from "react";
 import Shimmer from "./skimmer";
 import { Link } from "react-router-dom";
 import useShowStatus from "../utils/useShowStatus";
+import {toast} from 'react-toastify'
 
 
 const Body=()=>{
     let [listofrest,setlist]=useState([]);
     let [userinput,setinput]=useState("");
     let [filterList,setfilter]=useState([]);
-    
+    const navigate=useNavigate();
     
     
     useEffect(() => {
         const fetchData = async () => {
             try {
-               
                 const token = localStorage.getItem('token');
                 const dataFetch = await fetch("http://localhost:8080/api/", {
                     method: 'GET',
@@ -28,9 +28,22 @@ const Body=()=>{
                     },
                   });
                 const json = await dataFetch.json();
-             
-                setlist(json);
-                setfilter(json);
+                if(json.error){
+                    try {
+                        
+                        navigate('/login');
+                        toast('You need to login first')
+                    } catch (error) {
+                        console.log(error)
+                    }
+                   
+                }
+                else{
+                    setlist(json);
+                    setfilter(json);
+                }            
+                
+                
                 
                
             } catch (error) {
@@ -41,7 +54,7 @@ const Body=()=>{
         fetchData(); // Call the fetchData function
         
         
-    }, []); // Empty dependency array means this effect runs once, similar to componentDidMount
+    },[]); // Empty dependency array means this effect runs once, similar to componentDidMount
     
 
     
@@ -63,7 +76,7 @@ const Body=()=>{
                     <button className="px-4 py-0.5 bg-cutom-button text-cutom-white m-4 rounded-lg" onClick={()=>{
                         console.log(userinput);
                         listofrest=listofrest.filter((data)=>data.name.toLowerCase().includes(userinput.toLowerCase()));
-                        console.log(listofrest);
+                       
 
                         listofrest.length === 0 ? alert("No value found") : setfilter(listofrest);
 

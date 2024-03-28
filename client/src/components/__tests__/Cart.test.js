@@ -31,15 +31,7 @@ beforeEach(() => {
 
 
 test("check the cart functionality",()=>{
-    // render(
-    //     <BrowserRouter>
-    //     <Provider store={store}>
-    //         <Header/>
-    //         <Item data={data}/>
-            
-    //     </Provider>
-    //     </BrowserRouter>
-    // )
+    
     const items=screen.getAllByText('Add+');
     fireEvent.click(items[0]);
 
@@ -64,6 +56,55 @@ test("checking clear cart button",()=>{
     const it=screen.getAllByTestId('items');
     expect(it.length).toBe(2);
     // expect(cart).toBeInTheDocument();
+
+
+})
+test("checking add button",()=>{
+ 
+
+  const items=screen.getAllByText('Add+');
+ 
+  fireEvent.click(items[0]);
+
+  const cart= screen.getByText('CART 🛒 - (1 item)')
+  expect(cart).toBeInTheDocument();
+
+  const clrbtn=screen.getAllByRole('button',{name:"+"})
+
+  fireEvent.click(clrbtn[1]);
+
+
+  const it=screen.getAllByText('2');
+  expect(it[0]).toBeInTheDocument();
+  expect(it[1]).toBeInTheDocument();
+
+
+})
+
+test("checking remove button",()=>{
+ 
+  
+  const items=screen.getAllByText('Add+');
+ 
+  fireEvent.click(items[0]);
+
+
+  const cart= screen.getByText('CART 🛒 - (1 item)')
+  console.log(cart)
+  expect(cart).toBeInTheDocument();
+
+  const clrbtn=screen.getAllByRole('button',{name:"-"})
+  const its=screen.getAllByTestId('items');
+  expect(its.length).toBe(3);
+
+  fireEvent.click(clrbtn[1]);
+
+  const car= screen.getByText('CART 🛒 - (0 item)')
+  expect(car).toBeInTheDocument();
+  
+
+  const it=screen.getAllByTestId('items');
+  expect(it.length).toBe(2);
 
 
 })

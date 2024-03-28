@@ -4,7 +4,8 @@ import useShowStatus from "../utils/useShowStatus";
 // import { useContext } from "react";
 // import {usercontext} from "./login.js"
 import { useSelector } from "react-redux";
-
+import { useEffect } from "react";
+import {toast} from 'react-toastify'
 
 
 const Header=()=>{
@@ -17,10 +18,18 @@ const Header=()=>{
     
        
         navigate('/login')
+    
       };
     
-   
+    
     const cart=useSelector((store)=>store.cartSlice.items);
+    const token=localStorage.getItem('token')
+
+    // useEffect(()=>{
+    //     if(token===null)navigate('/login')
+    // },[token])
+    
+    
     return (
         
         <div className="flex justify-between bg-custom-color shadow-lg mb-0.5">
@@ -35,7 +44,7 @@ const Header=()=>{
             <li className="px-4 font-seri text-cutom-white"><Link to="/about">ABOUT US</Link></li>
             <li className="px-4 font-seri text-cutom-white"><Link to="/contact">CONTACT US</Link></li>
             <li className="px-4 font-seri text-cutom-white"><Link to="/cart">CART  🛒  - ({cart.length} item)</Link></li>
-            <li className="px-4 font-seri text-cutom-white"><Link to="/login" onClick={handleLogout}>Logout</Link></li>
+            <li className="px-4 font-seri text-cutom-white"><Link to="/login" onClick={handleLogout}>LOGOUT</Link></li>
             
         </ul>
         

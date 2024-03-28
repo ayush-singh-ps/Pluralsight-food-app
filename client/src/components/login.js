@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-
-
+import {toast} from 'react-toastify'
+import { useParams } from 'react-router-dom';
+import { ToastContainer} from 'react-toastify';
 
 import { Link } from 'react-router-dom';
 const Login = () => {
@@ -11,10 +11,10 @@ const Login = () => {
   const navigate=useNavigate();
 
 
+
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
+   
 
   const verify= await fetch('http://localhost:8080/api/user/login', {
     method: 'POST',
@@ -28,13 +28,21 @@ const Login = () => {
   });
   const { token,user } = await verify.json();
   localStorage.setItem('token', token);
-  console.log(token)
+  
 //   const res=await verify.json();
 //  console.log(res)
-  if(user)navigate('/body');
+  if(user){
+    navigate('/body');
+    toast('welcome user')}
   else {
     // localStorage.setItem('token', token);
+    
+    
     navigate('/login')
+    toast.error('Enter correct credentials')
+    
+   
+    
   }
 
  
@@ -46,6 +54,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-custom-purple py-12 px-4 sm:px-6 lg:px-8">
+      <ToastContainer/>
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-cutom-white">

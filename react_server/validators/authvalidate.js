@@ -3,7 +3,7 @@ const Joi=require('joi')
 
 
 const passwordValidate = (req, res, next) => {
-    const schema = Joi.string().min(5).max(10).pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required();
+    const schema = Joi.string().min(5).max(20).pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required();
     const { error } = schema.validate(req.body.password);
     
     if (error) {

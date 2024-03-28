@@ -1,15 +1,17 @@
 const {knex}=require('../config/connect')
+const { getRestaurant } = require('../db/getRestaurant')
+
 
 const displayRestaurant=async (req, res,next) => {
     try {
-        console.log(req.cookies)
-        const qry=await knex.select('*').from('restaurant')
+       
+        const qry=await getRestaurant();
         res.send(qry)
         
     } catch (error) {
-        res.send('error')
+        res.send('No restaurants')
     }
-    next();
+    // next();
    
 }
 

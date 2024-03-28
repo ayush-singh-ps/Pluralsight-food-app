@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "start index.js -p 8080",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",

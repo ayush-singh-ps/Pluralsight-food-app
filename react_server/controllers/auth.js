@@ -2,11 +2,12 @@ const {knex}=require('../config/connect')
 const { compare }=require('bcryptjs')
 const {hash}=require('bcryptjs')
 const jwt=require("jsonwebtoken")
+const {myUsers,checkUser,insertUser}=require("../db/myusers")
 
 
 const getUsers = async (req, res) => {
     try {
-      const users = await knex.select('*').from('users');
+      const users = await myUsers();
       res.status(200).json(users);
     } catch (error) {
     
@@ -15,12 +16,12 @@ const getUsers = async (req, res) => {
   };
 
 
-  const register = async (req,res,next) => {
+  const register = async (req,res) => {
    const {name,email,password}=req.body
     try {
         const hashedpass=await hash(password,10);
-        await knex('users').insert({username:name,email:email,password:hashedpass})
-      
+        
+        insertUser(name,email,hashedpass);
         return res.status(201).json({
             success:true,
             message:'the registeration was successful'
@@ -31,26 +32,25 @@ const getUsers = async (req, res) => {
 
   };
 
-  const login = async (req, res, next) => {
+  const login = async (req, res) => {
     const { email, password } = req.body;
     try {
-      const usr = await knex('users').select('*').where({ email: email })
+      const usr = await checkUser(email);
+      // console.log(usr[0])
       if (usr.length > 0) {
         const cpr = await compare(password, usr[0].password)
         if (cpr) {
           const token = jwt.sign(usr[0], 'secret', { expiresIn: '10m' });
-          console.log(token);
-  
-         
           return res.json({ user: usr[0], token: token });
         } else {
           res.ok = false;
+          res.status(500).json({ error: "Incorrect password" });
         }
       } else {
-        throw new Error('User not found');
+        res.status(500).json({ error: "User not found" });
       }
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: "Internal Server Error" });
     }
   }
   

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 928,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "df07bcf32c78542693ecc64758ebc07e",
+        "is_recommended": false,
+        "name": "Passion Fruit Iced Tea",
+        "price": "185.00",
+        "description": "Serves 1 | Brewed black tea and passion fruit."
+    },
+    {
+        "id": 929,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "467059ef2768f938c42585c7da85e9c5",
+        "is_recommended": false,
+        "name": "Iced Lime Tea",
+        "price": "180.00",
+        "description": "Serves 1 | Brewed black tea, splash of orange, lime juice."
+    },
+    {
+        "id": 930,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "f340005a9dac6b13fa08e2dd0e738b3d",
+        "is_recommended": false,
+        "name": "Orange Iced Tea",
+        "price": "180.00",
+        "description": "Serves 1 | Brewed black tea, orange and lime juice."
+    },
+    {
+        "id": 925,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "6ababf1390fe30af42b29e24fa10d179",
+        "is_recommended": false,
+        "name": "Fresh Lime Soda",
+        "price": "175.00",
+        "description": "Serves 1 | Muddled lime, mint and soda."
+    },
+    {
+        "id": 926,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "571a970003e8d1b48b92f2294a012845",
+        "is_recommended": false,
+        "name": "Fresh Lime Water",
+        "price": "175.00",
+        "description": "Serves 1 | Muddled lime, mint and purified water."
+    },
+    {
+        "id": 927,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "349a003999f3ff50cfc263cb61780a71",
+        "is_recommended": false,
+        "name": "Iced Coffee",
+        "price": "185.00",
+        "description": "Serves 1 | Coffee and milk on ice."
+    },
+    {
+        "id": 931,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "47ff400d0ebd9355b21722b8a4317e06",
+        "is_recommended": false,
+        "name": "Watermelon Agua Fresca",
+        "price": "180.00",
+        "description": "Serves 1 | Fresh watermelon juice with a splash of lime juice"
+    },
+    {
+        "id": 932,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "2e2b9c8bcf9ed1e44bfcdee2b410545d",
+        "is_recommended": false,
+        "name": "Virgin Margarita",
+        "price": "180.00",
+        "description": "Serves 1 | Made with fresh lime juice, pineapple."
+    },
+    {
+        "id": 933,
+        "res_cat_id": 154,
+        "res_id": 223,
+        "image_cdn": "fc8a57a35d9027431afea9ea0581714d",
+        "is_recommended": false,
+        "name": "Tamarind Margarita",
+        "price": "185.00",
+        "description": "Serves 1 | Made with tamarind pulp and lime juice."
+    }
+]
